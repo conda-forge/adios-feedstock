@@ -14,6 +14,11 @@ then
   find $SRC_DIR/utils -name "*.py" -exec 2to3 -w -n {} \;
 fi
 
+# avoid linker issues with out dependencies (blosc, bzip2) in
+# downstream packages
+# https://github.com/conda/conda-docs/pull/624
+autoreconf -vfi
+
 # configure
 export LIBRARY_PATH="$PREFIX/lib"
 export CFLAGS="-fPIC"
