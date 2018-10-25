@@ -1,11 +1,15 @@
 #!/bin/bash
 
-if [ "$(uname)" == "Darwin" ]; then
+if [[ ${target_platform} =~ osx.* ]]; then
     export CXX="${CXX} -stdlib=libc++"
     export LDFLAGS="${LDFLAGS} -Wl,-rpath,$PREFIX/lib"
 
     # remove -lrt
     sed -i '.bak' 's/ -lrt//g' $SRC_DIR/wrappers/numpy/Makefile
+else
+    # downstream linkage with shared libs to our dependencies
+    # https://github.com/conda-forge/adios-feedstock/pull/6#issuecomment-432995338
+    export LDFLAGS="${LDFLAGS} -Wl,-rpath-link,${PREFIX}/lib"
 fi
 
 # Python3 fixes
