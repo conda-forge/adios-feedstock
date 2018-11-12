@@ -1,6 +1,15 @@
 {% set name = "adios" %}
+{% set build = 1009 %}
 {% set version = "1.13.1" %}
 {% set sha256 = "684096cd7e5a7f6b8859601d4daeb1dfaa416dfc2d9d529158a62df6c5bcd7a0" %}
+
+# ensure mpi is defined (needed for conda-smithy recipe-lint)
+{% set mpi = mpi or 'nompi' %}
+
+# prioritize nompi variant via build number
+{% if mpi == 'nompi' %}
+{% set build = build + 100 %}
+{% endif %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +24,26 @@ source:
     - python3interp.patch
 
 build:
-  number: 1008
+  number: {{ build }}
+
+  # add build string so packages can depend on
+  # mpi or nompi variants
+  # dependencies:
+  # `pkg * mpi_mpich_*` for mpich
+  # `pkg * mpi_*` for any mpi
+  # `pkg * nompi_*` for no mpi
+
+  {% if mpi == 'nompi' %}
+  {% set mpi_prefix = "nompi" %}
+  {% else %}
+  {% set mpi_prefix = "mpi_" + mpi %}
+  {% endif %}
+  string: "{{ mpi_prefix }}_h{{ PKG_HASH }}_{{ build }}"
+
+  # strict runtime dependency on variant's MPI
+  run_exports:
+    - {{ name }} * {{ mpi_prefix }}_*
+
   skip: True  # [win]
 
 requirements:
@@ -30,14 +58,18 @@ requirements:
     - libtool
     - pkg-config
   host:
+    - {{ mpi }}  # [mpi != 'nompi']
     - blosc
     - bzip2
-    - hdf5
+#   - hdf5
+#   - hdf5 * mpi_{{ mpi }}_*  # [mpi != 'nompi']
     - zlib
   run:
+    - {{ mpi }}  # [mpi != "nompi"]
     - blosc
     - bzip2
-    - hdf5
+#   - hdf5
+#   - hdf5 * mpi_{{ mpi }}_*  # [mpi != 'nompi']
     - zlib
 
 test:
