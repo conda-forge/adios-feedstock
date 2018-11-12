@@ -13,7 +13,7 @@ then
 fi
 
 # configure does not pass this properly in all cases
-export CFLAGS="-fPIC"
+export CFLAGS="${CFLAGS} -fPIC"
 
 # re-create configuration files (autotools)
 #   also forces taking conda-forge libtool
