@@ -1,11 +1,9 @@
 #!/bin/bash
 
 if [[ ${target_platform} =~ osx.* ]]; then
-    export CXX="${CXX} -stdlib=libc++"
     export LDFLAGS="${LDFLAGS} -Wl,-rpath,$PREFIX/lib"
-
-    # remove -lrt
-    sed -i '.bak' 's/ -lrt//g' $SRC_DIR/wrappers/numpy/Makefile
+else
+    export LDFLAGS="${LDFLAGS} -Wl,-rpath-link,${PREFIX}/lib"
 fi
 
 # Python3 fixes
@@ -14,9 +12,8 @@ then
   find $SRC_DIR/utils -name "*.py" -exec 2to3 -w -n {} \;
 fi
 
-# configure
-export LIBRARY_PATH="$PREFIX/lib"
-export CFLAGS="-fPIC"
+# configure does not pass this properly in all cases
+export CFLAGS="${CFLAGS} -fPIC"
 
 # re-create configuration files (autotools)
 #   also forces taking conda-forge libtool

@@ -15,7 +15,7 @@ source:
     - python3interp.patch
 
 build:
-  number: 1006
+  number: 1007
   skip: True  # [win]
 
 requirements:
