@@ -10,9 +10,12 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: http://users.nccs.gov/%7Epnorbert/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    # Recognize newer python3 interpreters
+    - python3interp.patch
 
 build:
-  number: 1005
+  number: 1006
   skip: True  # [win]
 
 requirements:
@@ -22,6 +25,10 @@ requirements:
 #   - {{ compiler('fortran') }}
     - python
     - make
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
   host:
     - blosc
     - bzip2

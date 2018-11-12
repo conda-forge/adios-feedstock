@@ -18,6 +18,10 @@ fi
 export LIBRARY_PATH="$PREFIX/lib"
 export CFLAGS="-fPIC"
 
+# re-create configuration files (autotools)
+#   also forces taking conda-forge libtool
+autoreconf -vfi
+
 ./configure --prefix=$PREFIX \
             --with-pic \
             --enable-static \
