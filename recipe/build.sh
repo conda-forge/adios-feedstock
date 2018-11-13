@@ -1,10 +1,10 @@
 #!/bin/bash
 
 if [[ ${target_platform} =~ osx.* ]]; then
-    export LDFLAGS="${LDFLAGS} -Wl,-rpath,$PREFIX/lib"
-else
-    export LDFLAGS="${LDFLAGS} -Wl,-rpath-link,${PREFIX}/lib"
+    export LDFLAGS="${LDFLAGS} -Wl,-rpath,${PREFIX}/lib"
 fi
+
+export LDFLAGS="${LDFLAGS} -Wl,-rpath-link,${PREFIX}/lib"
 
 # Python3 fixes
 if [[ "${PY_VER}" =~ 3 ]]
@@ -24,9 +24,9 @@ autoreconf -vfi
             --enable-static \
             --enable-shared \
             --disable-fortran \
-            --with-blosc=$PREFIX \
-            --with-bzip2=$PREFIX \
-            --with-zlib=$PREFIX \
+            --with-blosc=${PREFIX} \
+            --with-bzip2=${PREFIX} \
+            --with-zlib=${PREFIX} \
             --without-hdf5 \
             --without-phdf5 \
             --without-sz \
