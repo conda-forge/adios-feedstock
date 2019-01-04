@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [[ ${target_platform} =~ osx.* ]]; then
-    export LDFLAGS="${LDFLAGS} -Wl,-rpath,$PREFIX/lib"
-else
+    export LDFLAGS="${LDFLAGS} -Wl,-rpath,${PREFIX}/lib"
+elif [[ ${target_platform} =~ linux.* ]]; then
     export LDFLAGS="${LDFLAGS} -Wl,-rpath-link,${PREFIX}/lib"
 fi
 
@@ -19,14 +19,14 @@ export CFLAGS="${CFLAGS} -fPIC"
 #   also forces taking conda-forge libtool
 autoreconf -vfi
 
-./configure --prefix=$PREFIX \
+./configure --prefix=${PREFIX} \
             --with-pic \
             --enable-static \
             --enable-shared \
             --disable-fortran \
-            --with-blosc=$PREFIX \
-            --with-bzip2=$PREFIX \
-            --with-zlib=$PREFIX \
+            --with-blosc=${PREFIX} \
+            --with-bzip2=${PREFIX} \
+            --with-zlib=${PREFIX} \
             --without-hdf5 \
             --without-phdf5 \
             --without-sz \
@@ -41,6 +41,6 @@ autoreconf -vfi
 #           --with-hdf5=$PREFIX
 
 # c library
-make -j "${CPU_COUNT}"
+make -j${CPU_COUNT}
 make check
 make install
