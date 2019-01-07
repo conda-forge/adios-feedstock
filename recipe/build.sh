@@ -19,6 +19,13 @@ export CFLAGS="${CFLAGS} -fPIC"
 #   also forces taking conda-forge libtool
 autoreconf -vfi
 
+# MPI variants
+if [[ ${mpi} == "nompi" ]]; then
+   export ADIOS_MPI="--without-mpi"
+else
+   export ADIOS_MPI="--with-mpi=${PREFIX}"
+fi
+
 ./configure --prefix=${PREFIX} \
             --with-pic \
             --enable-static \
@@ -32,7 +39,7 @@ autoreconf -vfi
             --without-sz \
             --without-szip \
             --without-zfp \
-            --without-mpi
+            ${ADIOS_MPI}
 
 # TODO nice to have
 # libtool error:

@@ -6,10 +6,18 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_c_compilergcccxx_compilergxxtarget_platformlinux-64:
-        CONFIG: linux_c_compilergcccxx_compilergxxtarget_platformlinux-64
-      linux_c_compilertoolchain_ccxx_compilertoolchain_cxxtarget_platformlinux-64:
-        CONFIG: linux_c_compilertoolchain_ccxx_compilertoolchain_cxxtarget_platformlinux-64
+      linux_c_compilergcccxx_compilergxxmpimpichtarget_platformlinux-64:
+        CONFIG: linux_c_compilergcccxx_compilergxxmpimpichtarget_platformlinux-64
+      linux_c_compilergcccxx_compilergxxmpinompitarget_platformlinux-64:
+        CONFIG: linux_c_compilergcccxx_compilergxxmpinompitarget_platformlinux-64
+      linux_c_compilergcccxx_compilergxxmpiopenmpitarget_platformlinux-64:
+        CONFIG: linux_c_compilergcccxx_compilergxxmpiopenmpitarget_platformlinux-64
+      linux_c_compilertoolchain_ccxx_compilertoolchain_cxxmpimpichtarget_platformlinux-64:
+        CONFIG: linux_c_compilertoolchain_ccxx_compilertoolchain_cxxmpimpichtarget_platformlinux-64
+      linux_c_compilertoolchain_ccxx_compilertoolchain_cxxmpinompitarget_platformlinux-64:
+        CONFIG: linux_c_compilertoolchain_ccxx_compilertoolchain_cxxmpinompitarget_platformlinux-64
+      linux_c_compilertoolchain_ccxx_compilertoolchain_cxxmpiopenmpitarget_platformlinux-64:
+        CONFIG: linux_c_compilertoolchain_ccxx_compilertoolchain_cxxmpiopenmpitarget_platformlinux-64
   steps:
   - script: |
       sudo pip install --upgrade pip

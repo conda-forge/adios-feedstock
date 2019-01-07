@@ -1,3 +1,8 @@
+mpi:
+- nompi
+- mpich
+- openmpi
+
 # we only need some python scripts executed during build
 python:
  - 3.6
