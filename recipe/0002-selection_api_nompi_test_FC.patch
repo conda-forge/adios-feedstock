@@ -1,0 +1,12 @@
+diff --git a/tests/test_src/Makefile.am b/tests/test_src/Makefile.am
+index d2f75c32..def821d5 100644
+--- a/tests/test_src/Makefile.am
++++ b/tests/test_src/Makefile.am
+@@ -118,7 +118,6 @@ array_attribute.o: array_attribute.c
+ #
+ # FORTRAN Tests
+ #
+-FC=$(MPIFC)
+ selection_api_SOURCES=selection_api.F90
+ selection_api_LDADD = $(top_builddir)/src/libadiosreadf_nompi.a $(ADIOSREADLIB_SEQ_LDADD)
+ selection_api_LDFLAGS = $(AM_LDFLAGS) $(ADIOSREADLIB_SEQ_LDFLAGS)
