@@ -1,5 +1,5 @@
 {% set name = "adios" %}
-{% set build = 1009 %}
+{% set build = 1010 %}
 {% set version = "1.13.1" %}
 {% set sha256 = "684096cd7e5a7f6b8859601d4daeb1dfaa416dfc2d9d529158a62df6c5bcd7a0" %}
 
@@ -21,7 +21,8 @@ source:
   sha256: {{ sha256 }}
   patches:
     # Recognize newer python3 interpreters
-    - python3interp.patch
+    - 0001-python3interp.patch
+    - 0002-selection_api_nompi_test_FC.patch
 
 build:
   number: {{ build }}
@@ -49,8 +50,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-#   - {{ compiler('fortran') }}
+    # FIXME: that MPICXX dependency in ADIOS' configure makes no sense
+    - {{ compiler('cxx') }}  # [mpi != 'nompi' and c_compiler != 'toolchain_c']
+    - {{ compiler('fortran') }}
     - python
     - make
     - autoconf
@@ -65,12 +67,12 @@ requirements:
 #   - hdf5 * mpi_{{ mpi }}_*  # [mpi != 'nompi']
     - zlib
   run:
-    - {{ mpi }}  # [mpi != "nompi"]
+    # FIXME: https://github.com/conda-forge/blosc-feedstock/blob/master/recipe/meta.yaml
+    # blosc builds static and shared but does no `run_exports` while we link it shared
     - blosc
+    # FIXME: https://github.com/conda-forge/bzip2-feedstock/blob/master/recipe/meta.yaml
+    # bzip2 is for unclear reasons expected in the run deps as well during checks
     - bzip2
-#   - hdf5
-#   - hdf5 * mpi_{{ mpi }}_*  # [mpi != 'nompi']
-    - zlib
 
 test:
   commands:

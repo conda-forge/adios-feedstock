@@ -1,23 +1,23 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 build_number_decrement:
-- '1000'
+- '0'
 bzip2:
 - '1'
 c_compiler:
-- toolchain_c
+- clang
 channel_sources:
-- conda-forge,defaults
+- conda-forge/label/gcc7,defaults
 channel_targets:
-- conda-forge main
-cxx_compiler:
-- toolchain_cxx
+- conda-forge gcc7
+fortran_compiler:
+- gfortran
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
 - '10.9'
 mpi:
-- openmpi
+- mpich
 pin_run_as_build:
   bzip2:
     max_pin: x
@@ -27,7 +27,7 @@ target_platform:
 - osx-64
 zip_keys:
 - - c_compiler
-  - cxx_compiler
+  - fortran_compiler
   - channel_sources
   - channel_targets
   - build_number_decrement

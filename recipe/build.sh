@@ -26,11 +26,12 @@ else
    export ADIOS_MPI="--with-mpi=${PREFIX}"
 fi
 
+# FIXME --enable-shared is broken in 1.13.1:
+# https://github.com/ornladios/ADIOS/issues/185
 ./configure --prefix=${PREFIX} \
             --with-pic \
             --enable-static \
-            --enable-shared \
-            --disable-fortran \
+            --enable-fortran \
             --with-blosc=${PREFIX} \
             --with-bzip2=${PREFIX} \
             --with-zlib=${PREFIX} \
@@ -42,12 +43,10 @@ fi
             ${ADIOS_MPI}
 
 # TODO nice to have
-# libtool error:
-#           --enable-fortran
 # configure error:
 #           --with-hdf5=$PREFIX
 
 # c library
-make -j${CPU_COUNT}
+make
 make check
 make install
