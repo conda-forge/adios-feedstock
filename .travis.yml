@@ -9,12 +9,12 @@ osx_image: xcode9.4
 
 env:
   matrix:
-    - CONFIG=osx_c_compilerclangcxx_compilerclangxxmpimpichtarget_platformosx-64
-    - CONFIG=osx_c_compilerclangcxx_compilerclangxxmpinompitarget_platformosx-64
-    - CONFIG=osx_c_compilerclangcxx_compilerclangxxmpiopenmpitarget_platformosx-64
-    - CONFIG=osx_c_compilertoolchain_ccxx_compilertoolchain_cxxmpimpichtarget_platformosx-64
-    - CONFIG=osx_c_compilertoolchain_ccxx_compilertoolchain_cxxmpinompitarget_platformosx-64
-    - CONFIG=osx_c_compilertoolchain_ccxx_compilertoolchain_cxxmpiopenmpitarget_platformosx-64
+    - CONFIG=osx_c_compilerclangfortran_compilergfortranmpimpichtarget_platformosx-64
+    - CONFIG=osx_c_compilerclangfortran_compilergfortranmpinompitarget_platformosx-64
+    - CONFIG=osx_c_compilerclangfortran_compilergfortranmpiopenmpitarget_platformosx-64
+    - CONFIG=osx_c_compilertoolchain_cfortran_compilertoolchain_fortmpimpichtarget_platformosx-64
+    - CONFIG=osx_c_compilertoolchain_cfortran_compilertoolchain_fortmpinompitarget_platformosx-64
+    - CONFIG=osx_c_compilertoolchain_cfortran_compilertoolchain_fortmpiopenmpitarget_platformosx-64
 
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
