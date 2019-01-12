@@ -1,5 +1,5 @@
 {% set name = "adios" %}
-{% set build = 1010 %}
+{% set build = 1011 %}
 {% set version = "1.13.1" %}
 {% set sha256 = "684096cd7e5a7f6b8859601d4daeb1dfaa416dfc2d9d529158a62df6c5bcd7a0" %}
 
@@ -41,9 +41,10 @@ build:
   {% endif %}
   string: "{{ mpi_prefix }}_h{{ PKG_HASH }}_{{ build }}"
 
-  # strict runtime dependency on variant's MPI
-  run_exports:
-    - {{ name }} * {{ mpi_prefix }}_*
+  # if we were building shared libraries (we don't):
+  # strict runtime dependency on build-time MPI flavor
+  # run_exports:
+  #   - {{ name }} * {{ mpi_prefix }}_*
 
   skip: True  # [win]
 
