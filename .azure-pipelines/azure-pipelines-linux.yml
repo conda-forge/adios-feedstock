@@ -6,18 +6,18 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_c_compilergccfortran_compilergfortranmpimpichtarget_platformlinux-64:
-        CONFIG: linux_c_compilergccfortran_compilergfortranmpimpichtarget_platformlinux-64
-      linux_c_compilergccfortran_compilergfortranmpinompitarget_platformlinux-64:
-        CONFIG: linux_c_compilergccfortran_compilergfortranmpinompitarget_platformlinux-64
-      linux_c_compilergccfortran_compilergfortranmpiopenmpitarget_platformlinux-64:
-        CONFIG: linux_c_compilergccfortran_compilergfortranmpiopenmpitarget_platformlinux-64
-      linux_c_compilertoolchain_cfortran_compilertoolchain_fortmpimpichtarget_platformlinux-64:
-        CONFIG: linux_c_compilertoolchain_cfortran_compilertoolchain_fortmpimpichtarget_platformlinux-64
-      linux_c_compilertoolchain_cfortran_compilertoolchain_fortmpinompitarget_platformlinux-64:
-        CONFIG: linux_c_compilertoolchain_cfortran_compilertoolchain_fortmpinompitarget_platformlinux-64
-      linux_c_compilertoolchain_cfortran_compilertoolchain_fortmpiopenmpitarget_platformlinux-64:
-        CONFIG: linux_c_compilertoolchain_cfortran_compilertoolchain_fortmpiopenmpitarget_platformlinux-64
+      linux_c_compilergcccxx_compilergxxfortran_compilergfortranmpimpichtarget_platformlinux-64:
+        CONFIG: linux_c_compilergcccxx_compilergxxfortran_compilergfortranmpimpichtarget_platformlinux-64
+      linux_c_compilergcccxx_compilergxxfortran_compilergfortranmpinompitarget_platformlinux-64:
+        CONFIG: linux_c_compilergcccxx_compilergxxfortran_compilergfortranmpinompitarget_platformlinux-64
+      linux_c_compilergcccxx_compilergxxfortran_compilergfortranmpiopenmpitarget_platformlinux-64:
+        CONFIG: linux_c_compilergcccxx_compilergxxfortran_compilergfortranmpiopenmpitarget_platformlinux-64
+      linux_c_compilertoolchain_ccxx_compilertoolchain_cxxfortran_compilertoolchain_fortmpimpichtarget_platformlinux-64:
+        CONFIG: linux_c_compilertoolchain_ccxx_compilertoolchain_cxxfortran_compilertoolchain_fortmpimpichtarget_platformlinux-64
+      linux_c_compilertoolchain_ccxx_compilertoolchain_cxxfortran_compilertoolchain_fortmpinompitarget_platformlinux-64:
+        CONFIG: linux_c_compilertoolchain_ccxx_compilertoolchain_cxxfortran_compilertoolchain_fortmpinompitarget_platformlinux-64
+      linux_c_compilertoolchain_ccxx_compilertoolchain_cxxfortran_compilertoolchain_fortmpiopenmpitarget_platformlinux-64:
+        CONFIG: linux_c_compilertoolchain_ccxx_compilertoolchain_cxxfortran_compilertoolchain_fortmpiopenmpitarget_platformlinux-64
   steps:
   - script: |
       sudo pip install --upgrade pip
