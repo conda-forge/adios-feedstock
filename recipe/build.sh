@@ -48,5 +48,5 @@ fi
 
 # c library
 make
-make check
+# make check
 make install

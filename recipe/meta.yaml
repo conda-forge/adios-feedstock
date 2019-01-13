@@ -48,6 +48,12 @@ build:
 
   skip: True  # [win]
 
+  ignore_run_exports:
+    # we build static archives for fortran bindings
+    #   libgfortran only needed with mpich and downstream will include
+    #   compiler('fortran') anyway if they use this
+    - libgfortran  # [mpi != 'mpich']
+
 requirements:
   build:
     - {{ compiler('c') }}
