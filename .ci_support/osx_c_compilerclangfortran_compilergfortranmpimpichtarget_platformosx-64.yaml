@@ -10,8 +10,6 @@ channel_sources:
 - conda-forge/label/gcc7,defaults
 channel_targets:
 - conda-forge gcc7
-cxx_compiler:
-- clangxx
 fortran_compiler:
 - gfortran
 macos_machine:
@@ -19,22 +17,16 @@ macos_machine:
 macos_min_version:
 - '10.9'
 mpi:
-- nompi
+- mpich
 pin_run_as_build:
   bzip2:
     max_pin: x
-  python:
-    min_pin: x.x
-    max_pin: x.x
   zlib:
     max_pin: x.x
-python:
-- '3.6'
 target_platform:
 - osx-64
 zip_keys:
 - - c_compiler
-  - cxx_compiler
   - fortran_compiler
   - channel_sources
   - channel_targets

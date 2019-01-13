@@ -6,18 +6,18 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      osx_c_compilerclangcxx_compilerclangxxfortran_compilergfortranmpimpichtarget_platformosx-64:
-        CONFIG: osx_c_compilerclangcxx_compilerclangxxfortran_compilergfortranmpimpichtarget_platformosx-64
-      osx_c_compilerclangcxx_compilerclangxxfortran_compilergfortranmpinompitarget_platformosx-64:
-        CONFIG: osx_c_compilerclangcxx_compilerclangxxfortran_compilergfortranmpinompitarget_platformosx-64
-      osx_c_compilerclangcxx_compilerclangxxfortran_compilergfortranmpiopenmpitarget_platformosx-64:
-        CONFIG: osx_c_compilerclangcxx_compilerclangxxfortran_compilergfortranmpiopenmpitarget_platformosx-64
-      osx_c_compilertoolchain_ccxx_compilertoolchain_cxxfortran_compilertoolchain_fortmpimpichtarget_platformosx-64:
-        CONFIG: osx_c_compilertoolchain_ccxx_compilertoolchain_cxxfortran_compilertoolchain_fortmpimpichtarget_platformosx-64
-      osx_c_compilertoolchain_ccxx_compilertoolchain_cxxfortran_compilertoolchain_fortmpinompitarget_platformosx-64:
-        CONFIG: osx_c_compilertoolchain_ccxx_compilertoolchain_cxxfortran_compilertoolchain_fortmpinompitarget_platformosx-64
-      osx_c_compilertoolchain_ccxx_compilertoolchain_cxxfortran_compilertoolchain_fortmpiopenmpitarget_platformosx-64:
-        CONFIG: osx_c_compilertoolchain_ccxx_compilertoolchain_cxxfortran_compilertoolchain_fortmpiopenmpitarget_platformosx-64
+      osx_c_compilerclangfortran_compilergfortranmpimpichtarget_platformosx-64:
+        CONFIG: osx_c_compilerclangfortran_compilergfortranmpimpichtarget_platformosx-64
+      osx_c_compilerclangfortran_compilergfortranmpinompitarget_platformosx-64:
+        CONFIG: osx_c_compilerclangfortran_compilergfortranmpinompitarget_platformosx-64
+      osx_c_compilerclangfortran_compilergfortranmpiopenmpitarget_platformosx-64:
+        CONFIG: osx_c_compilerclangfortran_compilergfortranmpiopenmpitarget_platformosx-64
+      osx_c_compilertoolchain_cfortran_compilertoolchain_fortmpimpichtarget_platformosx-64:
+        CONFIG: osx_c_compilertoolchain_cfortran_compilertoolchain_fortmpimpichtarget_platformosx-64
+      osx_c_compilertoolchain_cfortran_compilertoolchain_fortmpinompitarget_platformosx-64:
+        CONFIG: osx_c_compilertoolchain_cfortran_compilertoolchain_fortmpinompitarget_platformosx-64
+      osx_c_compilertoolchain_cfortran_compilertoolchain_fortmpiopenmpitarget_platformosx-64:
+        CONFIG: osx_c_compilertoolchain_cfortran_compilertoolchain_fortmpiopenmpitarget_platformosx-64
 
   steps:
   # TODO: Fast finish on azure pipelines?
