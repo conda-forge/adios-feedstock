@@ -1,8 +1,6 @@
 About adios
 ===========
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
-
 Home: https://www.olcf.ornl.gov/center-projects/adios/
 
 Package license: BSD 3-Clause
@@ -24,9 +22,76 @@ data.
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/adios-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/adios-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/adios-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/adios-feedstock)
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+
+<table>
+    
+  <tr>
+    <td>Azure</td>
+    <td>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_mpimpichtarget_platformlinux-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_mpimpichtarget_platformlinux-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_mpinompitarget_platformlinux-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_mpinompitarget_platformlinux-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_mpiopenmpitarget_platformlinux-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_mpiopenmpitarget_platformlinux-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_mpimpichtarget_platformosx-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_mpimpichtarget_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_mpinompitarget_platformosx-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_mpinompitarget_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_mpiopenmpitarget_platformosx-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_mpiopenmpitarget_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td>Windows</td>
+    <td>
+      <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
+    </td>
+  </tr>
+![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
+</table>
 
 Current release info
 ====================
@@ -59,6 +124,8 @@ conda search adios --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
