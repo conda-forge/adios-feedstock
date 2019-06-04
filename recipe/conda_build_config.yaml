@@ -3,6 +3,10 @@ mpi:
 - mpich
 - openmpi
 
+pin_run_as_build:
+  mpich: x.x
+  openmpi: x.x
+
 # we only need some python scripts executed during build
 python:
  - 3.6
