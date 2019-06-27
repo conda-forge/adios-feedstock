@@ -23,7 +23,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>Travis</td>
+    <td>
+      <a href="https://travis-ci.org/conda-forge/adios-feedstock">
+        <img alt="macOS" src="https://img.shields.io/travis/conda-forge/adios-feedstock/master.svg?label=macOS">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -37,6 +44,27 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
+              <td>linux_aarch64_mpimpichtarget_platformlinux-aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_mpimpichtarget_platformlinux-aarch64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_mpinompitarget_platformlinux-aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_mpinompitarget_platformlinux-aarch64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_mpiopenmpitarget_platformlinux-aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_mpiopenmpitarget_platformlinux-aarch64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_mpimpichtarget_platformlinux-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
@@ -55,6 +83,27 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_mpiopenmpitarget_platformlinux-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_mpimpichtarget_platformlinux-ppc64le</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_mpimpichtarget_platformlinux-ppc64le" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_mpinompitarget_platformlinux-ppc64le</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_mpinompitarget_platformlinux-ppc64le" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_mpiopenmpitarget_platformlinux-ppc64le</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_mpiopenmpitarget_platformlinux-ppc64le" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -90,7 +139,6 @@ Current build status
       <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
     </td>
   </tr>
-![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
 </table>
 
 Current release info
