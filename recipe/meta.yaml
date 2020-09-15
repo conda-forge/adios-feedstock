@@ -1,5 +1,5 @@
 {% set name = "adios" %}
-{% set build = 1019 %}
+{% set build = 1020 %}
 {% set version = "1.13.1" %}
 {% set sha256 = "684096cd7e5a7f6b8859601d4daeb1dfaa416dfc2d9d529158a62df6c5bcd7a0" %}
 
@@ -24,7 +24,9 @@ source:
     - 0001-python3interp.patch
     - 0002-selection_api_nompi_test_FC.patch
     # https://github.com/ornladios/ADIOS/pull/201
+    # https://github.com/ornladios/ADIOS/commit/f33031ee206d552b286674d0f1641b9aca6b9100
     - 0003-numpy.py
+    - 0004-numpy-more.py
 
 build:
   number: {{ build }}
