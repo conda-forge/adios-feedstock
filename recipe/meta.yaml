@@ -101,7 +101,7 @@ test:
 
 about:
   home: https://www.olcf.ornl.gov/center-projects/adios/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: COPYING
   summary: 'The Adaptable IO System (ADIOS) for flexible and fast scientific data processing.'
