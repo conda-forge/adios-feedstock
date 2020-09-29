@@ -1,5 +1,5 @@
 {% set name = "adios" %}
-{% set build = 1019 %}
+{% set build = 1020 %}
 {% set version = "1.13.1" %}
 {% set sha256 = "684096cd7e5a7f6b8859601d4daeb1dfaa416dfc2d9d529158a62df6c5bcd7a0" %}
 
@@ -71,6 +71,7 @@ requirements:
     # and build pinning from {{ mpi_prefix }}
 #   - hdf5
 #   - hdf5 * mpi_{{ mpi }}_*  # [mpi != 'nompi']
+    - zfp
     - zlib
 
 test:
@@ -99,7 +100,7 @@ test:
 
 about:
   home: https://www.olcf.ornl.gov/center-projects/adios/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: COPYING
   summary: 'The Adaptable IO System (ADIOS) for flexible and fast scientific data processing.'

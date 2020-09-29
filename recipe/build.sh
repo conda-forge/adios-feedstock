@@ -39,7 +39,7 @@ fi
             --without-phdf5 \
             --without-sz \
             --without-szip \
-            --without-zfp \
+            --with-zfp=${PREFIX} \
             ${ADIOS_MPI}
 
 # TODO nice to have
