@@ -5,7 +5,7 @@ bzip2:
 c_compiler:
 - gcc
 c_compiler_version:
-- '7.5'
+- '9'
 cdt_arch:
 - aarch64
 cdt_name:
@@ -17,13 +17,13 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '7.5'
+- '9'
 docker_image:
 - condaforge/linux-anvil-aarch64
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- 7.5.0
+- '9'
 mpi:
 - mpich
 pin_run_as_build:
@@ -33,5 +33,9 @@ pin_run_as_build:
     max_pin: x.x
 target_platform:
 - linux-aarch64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+  - fortran_compiler_version
 zlib:
 - '1.2'
