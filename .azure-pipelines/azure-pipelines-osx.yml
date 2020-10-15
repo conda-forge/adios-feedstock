@@ -8,16 +8,24 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      osx_64_mpimpichtarget_platformosx-64:
-        CONFIG: osx_64_mpimpichtarget_platformosx-64
+      osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version7mpimpichtarget_platformosx-64:
+        CONFIG: osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version7mpimpichtarget_platformosx-64
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompitarget_platformosx-64:
-        CONFIG: osx_64_mpinompitarget_platformosx-64
+      osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version7mpinompitarget_platformosx-64:
+        CONFIG: osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version7mpinompitarget_platformosx-64
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpitarget_platformosx-64:
-        CONFIG: osx_64_mpiopenmpitarget_platformosx-64
+      osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version7mpiopenmpitarget_platformosx-64:
+        CONFIG: osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version7mpiopenmpitarget_platformosx-64
         UPLOAD_PACKAGES: 'True'
-    maxParallel: 8
+      osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version9mpimpichtarget_platformosx-64:
+        CONFIG: osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version9mpimpichtarget_platformosx-64
+        UPLOAD_PACKAGES: 'True'
+      osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version9mpinompitarget_platformosx-64:
+        CONFIG: osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version9mpinompitarget_platformosx-64
+        UPLOAD_PACKAGES: 'True'
+      osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version9mpiopenmpitarget_platformosx-64:
+        CONFIG: osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version9mpiopenmpitarget_platformosx-64
+        UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
   steps:
