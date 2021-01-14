@@ -9,7 +9,7 @@ pin_run_as_build:
 
 # we only need some python scripts executed during build
 python:
- - 3.6
+ - 3.8
 
 ignore_version:
  - python
