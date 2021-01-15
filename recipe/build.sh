@@ -27,9 +27,9 @@ else
 fi
 
 # Fortran bindings
-export ADIOS_FORTRAN="--enable-fortran"
 if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
-    export ADIOS_FORTRAN="--disable-fortran"
+    # gfortran 10+:
+    export FCFLAGS="${FCFLAGS} -fallow-argument-mismatch"
 fi
 
 # FIXME --enable-shared is broken in 1.13.1:
@@ -37,7 +37,7 @@ fi
 ./configure --prefix=${PREFIX} \
             --with-pic \
             --enable-static \
-            ${ADIOS_FORTRAN} \
+            --enable-fortran \
             --with-blosc=${PREFIX} \
             --with-bzip2=${PREFIX} \
             --with-zlib=${PREFIX} \
