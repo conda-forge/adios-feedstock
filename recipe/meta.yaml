@@ -63,6 +63,7 @@ requirements:
     - autoconf
     - automake
     - libtool
+    - {{ mpi }}  # [mpi == 'openmpi']
     - pkg-config
   host:
     - {{ mpi }}  # [mpi != 'nompi']
