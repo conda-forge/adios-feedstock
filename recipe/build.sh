@@ -26,12 +26,18 @@ else
    export ADIOS_MPI="--with-mpi=${PREFIX}"
 fi
 
+# Fortran bindings
+export ADIOS_FORTRAN="--enable-fortran"
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
+    export ADIOS_FORTRAN="--disable-fortran"
+fi
+
 # FIXME --enable-shared is broken in 1.13.1:
 # https://github.com/ornladios/ADIOS/issues/185
 ./configure --prefix=${PREFIX} \
             --with-pic \
             --enable-static \
-            --enable-fortran \
+            ${ADIOS_FORTRAN} \
             --with-blosc=${PREFIX} \
             --with-bzip2=${PREFIX} \
             --with-zlib=${PREFIX} \
