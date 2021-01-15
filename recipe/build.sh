@@ -30,6 +30,8 @@ fi
 if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
     # gfortran 10+:
     export FCFLAGS="${FCFLAGS} -fallow-argument-mismatch"
+    # openmpi cross compile support
+    export OPAL_PREFIX=$PREFIX
 fi
 
 # FIXME --enable-shared is broken in 1.13.1:
