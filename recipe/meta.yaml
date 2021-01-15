@@ -57,7 +57,8 @@ requirements:
     # FIXME: that MPICXX dependency in ADIOS' configure makes no sense
     - {{ compiler('cxx') }}  # [mpi != 'nompi' and c_compiler != 'toolchain_c']
     - {{ compiler('fortran') }}
-    - python
+    # we only need some python scripts executed during build
+    - python >=3
     - make
     - autoconf
     - automake
