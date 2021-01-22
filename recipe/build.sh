@@ -26,6 +26,14 @@ else
    export ADIOS_MPI="--with-mpi=${PREFIX}"
 fi
 
+# Fortran bindings
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
+    # gfortran 10+:
+    export FCFLAGS="${FCFLAGS} -fallow-argument-mismatch"
+    # openmpi cross compile support
+    export OPAL_PREFIX=$PREFIX
+fi
+
 # FIXME --enable-shared is broken in 1.13.1:
 # https://github.com/ornladios/ADIOS/issues/185
 ./configure --prefix=${PREFIX} \
@@ -48,5 +56,7 @@ fi
 
 # c library
 make
-make check
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
+    make check
+fi
 make install

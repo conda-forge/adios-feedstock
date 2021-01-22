@@ -3,7 +3,7 @@ About adios
 
 Home: https://www.olcf.ornl.gov/center-projects/adios/
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/adios-feedstock/blob/master/LICENSE.txt)
 
@@ -28,6 +28,13 @@ Current build status
 
 
 <table><tr>
+    <td>Travis</td>
+    <td>
+      <a href="https://travis-ci.com/conda-forge/adios-feedstock">
+        <img alt="macOS" src="https://img.shields.io/travis/com/conda-forge/adios-feedstock/master.svg?label=macOS">
+      </a>
+    </td>
+  </tr><tr>
     <td>Drone</td>
     <td>
       <a href="https://cloud.drone.io/conda-forge/adios-feedstock">
@@ -48,171 +55,108 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7mpimpichtarget_platformlinux-64</td>
+              <td>linux_64_mpimpich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7mpimpichtarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_64_mpimpich" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7mpinompitarget_platformlinux-64</td>
+              <td>linux_64_mpinompi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7mpinompitarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_64_mpinompi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7mpiopenmpitarget_platformlinux-64</td>
+              <td>linux_64_mpiopenmpi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7mpiopenmpitarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_64_mpiopenmpi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpimpichtarget_platformlinux-64</td>
+              <td>linux_aarch64_mpimpich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpimpichtarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_mpimpich" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpinompitarget_platformlinux-64</td>
+              <td>linux_aarch64_mpinompi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpinompitarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_mpinompi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpiopenmpitarget_platformlinux-64</td>
+              <td>linux_aarch64_mpiopenmpi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpiopenmpitarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_mpiopenmpi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7mpimpichtarget_platformlinux-aarch64</td>
+              <td>linux_ppc64le_mpimpich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7mpimpichtarget_platformlinux-aarch64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_mpimpich" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7mpinompitarget_platformlinux-aarch64</td>
+              <td>linux_ppc64le_mpinompi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7mpinompitarget_platformlinux-aarch64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_mpinompi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7mpiopenmpitarget_platformlinux-aarch64</td>
+              <td>linux_ppc64le_mpiopenmpi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7mpiopenmpitarget_platformlinux-aarch64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_mpiopenmpi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpimpichtarget_platformlinux-aarch64</td>
+              <td>osx_64_mpimpich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpimpichtarget_platformlinux-aarch64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_64_mpimpich" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpinompitarget_platformlinux-aarch64</td>
+              <td>osx_64_mpinompi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpinompitarget_platformlinux-aarch64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_64_mpinompi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpiopenmpitarget_platformlinux-aarch64</td>
+              <td>osx_64_mpiopenmpi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpiopenmpitarget_platformlinux-aarch64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_64_mpiopenmpi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_c_compiler_version8cxx_compiler_version8fortran_compiler_version8mpimpichtarget_platformlinux-ppc64le</td>
+              <td>osx_arm64_mpimpich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_c_compiler_version8cxx_compiler_version8fortran_compiler_version8mpimpichtarget_platformlinux-ppc64le" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_mpimpich" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_c_compiler_version8cxx_compiler_version8fortran_compiler_version8mpinompitarget_platformlinux-ppc64le</td>
+              <td>osx_arm64_mpinompi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_c_compiler_version8cxx_compiler_version8fortran_compiler_version8mpinompitarget_platformlinux-ppc64le" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_mpinompi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_c_compiler_version8cxx_compiler_version8fortran_compiler_version8mpiopenmpitarget_platformlinux-ppc64le</td>
+              <td>osx_arm64_mpiopenmpi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_c_compiler_version8cxx_compiler_version8fortran_compiler_version8mpiopenmpitarget_platformlinux-ppc64le" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpimpichtarget_platformlinux-ppc64le</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpimpichtarget_platformlinux-ppc64le" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpinompitarget_platformlinux-ppc64le</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpinompitarget_platformlinux-ppc64le" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpiopenmpitarget_platformlinux-ppc64le</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_c_compiler_version9cxx_compiler_version9fortran_compiler_version9mpiopenmpitarget_platformlinux-ppc64le" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version7mpimpichtarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version7mpimpichtarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version7mpinompitarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version7mpinompitarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version7mpiopenmpitarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version7mpiopenmpitarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version9mpimpichtarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version9mpimpichtarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version9mpinompitarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version9mpinompitarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version9mpiopenmpitarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_64_c_compiler_version10cxx_compiler_version10fortran_compiler_version9mpiopenmpitarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/adios-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_mpiopenmpi" alt="variant">
                 </a>
               </td>
             </tr>

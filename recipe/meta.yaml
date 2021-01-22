@@ -1,5 +1,5 @@
 {% set name = "adios" %}
-{% set build = 1020 %}
+{% set build = 1021 %}
 {% set version = "1.13.1" %}
 {% set sha256 = "684096cd7e5a7f6b8859601d4daeb1dfaa416dfc2d9d529158a62df6c5bcd7a0" %}
 
@@ -57,11 +57,13 @@ requirements:
     # FIXME: that MPICXX dependency in ADIOS' configure makes no sense
     - {{ compiler('cxx') }}  # [mpi != 'nompi' and c_compiler != 'toolchain_c']
     - {{ compiler('fortran') }}
-    - python
+    # we only need some python scripts executed during build
+    - python >=3
     - make
     - autoconf
     - automake
     - libtool
+    - {{ mpi }}  # [mpi == 'openmpi']
     - pkg-config
   host:
     - {{ mpi }}  # [mpi != 'nompi']
@@ -99,8 +101,7 @@ test:
 
 about:
   home: https://www.olcf.ornl.gov/center-projects/adios/
-  license: BSD 3-Clause
-  license_family: BSD
+  license: BSD-3-Clause
   license_file: COPYING
   summary: 'The Adaptable IO System (ADIOS) for flexible and fast scientific data processing.'
 
