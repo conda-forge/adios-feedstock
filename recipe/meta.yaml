@@ -96,8 +96,6 @@ test:
     {% endfor %}
 
     # inspect linkage of ADIOS
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [unix]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://www.olcf.ornl.gov/center-projects/adios/
