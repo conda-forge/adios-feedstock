@@ -5,15 +5,15 @@ bzip2:
 c_compiler:
 - clang
 c_compiler_version:
-- '10'
+- '12'
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '10'
+- '12'
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
@@ -21,7 +21,11 @@ fortran_compiler_version:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 mpi:
-- mpich
+- nompi
+mpich:
+- '4'
+openmpi:
+- '4'
 pin_run_as_build:
   bzip2:
     max_pin: x
