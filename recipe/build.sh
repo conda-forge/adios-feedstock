@@ -54,6 +54,10 @@ fi
 # configure error:
 #           --with-hdf5=$PREFIX
 
+# bpls collides with ADIOS2
+# Rename to bp3ls
+mv ${PREFIX}/bin/bpls ${PREFIX}/bin/bp3ls
+
 # c library
 make
 if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
