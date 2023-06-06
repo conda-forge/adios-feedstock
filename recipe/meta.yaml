@@ -86,7 +86,7 @@ test:
         "bpsplit",
         "bpappend",
         "bpdump",
-        "bpls",
+        "bp3ls",
         "bprecover",
         "skeldump"
     ] %}
