@@ -26,10 +26,10 @@ else
    export ADIOS_MPI="--with-mpi=${PREFIX}"
 fi
 
-# Fortran bindings
+# GFortran 10+ silenced warnings in Fortran bindings
+export FCFLAGS="${FCFLAGS} -fallow-argument-mismatch"
+
 if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
-    # gfortran 10+:
-    export FCFLAGS="${FCFLAGS} -fallow-argument-mismatch"
     # openmpi cross compile support
     export OPAL_PREFIX=$PREFIX
 fi
