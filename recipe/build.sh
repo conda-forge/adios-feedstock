@@ -26,10 +26,10 @@ else
    export ADIOS_MPI="--with-mpi=${PREFIX}"
 fi
 
-# Fortran bindings
+# GFortran 10+ silenced warnings in Fortran bindings
+export FCFLAGS="${FCFLAGS} -fallow-argument-mismatch"
+
 if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
-    # gfortran 10+:
-    export FCFLAGS="${FCFLAGS} -fallow-argument-mismatch"
     # openmpi cross compile support
     export OPAL_PREFIX=$PREFIX
 fi
@@ -60,3 +60,7 @@ if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
     make check
 fi
 make install
+
+# bpls collides with ADIOS2
+# Rename to bp3ls
+mv ${PREFIX}/bin/bpls ${PREFIX}/bin/bp3ls
