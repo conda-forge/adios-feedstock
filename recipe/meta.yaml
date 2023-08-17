@@ -1,5 +1,5 @@
 {% set name = "adios" %}
-{% set build = 1022 %}
+{% set build = 1023 %}
 {% set version = "1.13.1" %}
 {% set sha256 = "684096cd7e5a7f6b8859601d4daeb1dfaa416dfc2d9d529158a62df6c5bcd7a0" %}
 
@@ -47,7 +47,7 @@ build:
   # seams needed for proper downstream MPI selection.
   # strict runtime dependency on build-time MPI flavor
   run_exports:
-    - {{ name }} * {{ mpi_prefix }}_*
+    - {{ pin_subpackage('adios', min_pin='x.x.x', max_pin='x.x.x') }} {{ mpi_prefix }}_*
 
   skip: True  # [win]
 
