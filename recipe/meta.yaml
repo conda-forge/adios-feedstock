@@ -1,7 +1,7 @@
 {% set name = "adios" %}
 {% set build = 1023 %}
 {% set version = "1.13.1" %}
-{% set sha256 = "684096cd7e5a7f6b8859601d4daeb1dfaa416dfc2d9d529158a62df6c5bcd7a0" %}
+{% set sha256 = "b1c6949918f5e69f701cabfe5987c0b286793f1057d4690f04747852544e157b" %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
