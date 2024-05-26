@@ -17,7 +17,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://users.nccs.gov/%7Epnorbert/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/ornladios/ADIOS/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
     # Recognize newer python3 interpreters
