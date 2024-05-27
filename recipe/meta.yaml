@@ -1,5 +1,5 @@
 {% set name = "adios" %}
-{% set build = 1023 %}
+{% set build = 1024 %}
 {% set version = "1.13.1" %}
 {% set sha256 = "b1c6949918f5e69f701cabfe5987c0b286793f1057d4690f04747852544e157b" %}
 
@@ -54,6 +54,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     # FIXME: that MPICXX dependency in ADIOS' configure makes no sense
     - {{ compiler('cxx') }}  # [mpi != 'nompi' and c_compiler != 'toolchain_c']
     - {{ compiler('fortran') }}
